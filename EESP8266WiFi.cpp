@@ -7,8 +7,8 @@ const char* ssid = "YOUR_WIFI_SSID";
 const char* password = "YOUR_WIFI_PASSWORD";
 
 // MQTT CONFIGURATION
-const char* mqtt_server = "broker.hivemq.com"; // Use a public broker for test
-const int mqtt_port = 1883;
+const char* mqtt_server = ""; // Acá te paso el broker
+const int mqtt_port = ;  // Acá te paso el puerto. Usalo como int
 const char* mqtt_user = ""; // Not needed for public
 const char* mqtt_password = ""; // Not needed for public
 
