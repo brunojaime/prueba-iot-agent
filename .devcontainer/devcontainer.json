@@ -1,0 +1,37 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "okta-mcp",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18",
+	  "installToolPackage": true
+    }
+  },
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [5598,8000,8080],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "bash ./setup.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"charliermarsh.ruff",
+				"tamasfe.even-better-toml",
+				"ms-python.mypy-type-checker",
+				"ms-azuretools.vscode-containers"
+			]
+		}
+	},
+	"runArgs": ["--network=host"]
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
