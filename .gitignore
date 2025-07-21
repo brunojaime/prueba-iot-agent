@@ -5,7 +5,7 @@ certs-publisher
 __pycache__/
 *.py[codz]
 *$py.class
-
+aws/
 # C extensions
 *.so
 
